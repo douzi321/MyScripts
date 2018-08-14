@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\Debug\APILibrary.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\Debug\APILibrary.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Script\Script\APILibrary\bin\Debug\APILibrary.dll
+C:\Users\Administrator\Desktop\Script\Script\APILibrary\bin\Debug\APILibrary.pdb
+C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\Debug\APILibrary.dll
+C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\Debug\APILibrary.pdb
