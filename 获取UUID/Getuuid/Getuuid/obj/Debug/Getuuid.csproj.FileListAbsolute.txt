@@ -1,9 +1,0 @@
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\bin\Debug\Getuuid.exe
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\bin\Debug\Getuuid.pdb
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\obj\Debug\Getuuid.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\obj\Debug\Getuuid.Form1.resources
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\obj\Debug\Getuuid.Properties.Resources.resources
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\obj\Debug\Getuuid.csproj.GenerateResource.cache
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\obj\Debug\Getuuid.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\obj\Debug\Getuuid.exe
-C:\Users\Administrator\Desktop\获取UUID\Getuuid\Getuuid\obj\Debug\Getuuid.pdb

@@ -1,6 +1,0 @@
-C:\Users\Administrator\Desktop\Script\Script\APILibrary\bin\x86\Debug\APILibrary.dll
-C:\Users\Administrator\Desktop\Script\Script\APILibrary\bin\x86\Debug\APILibrary.pdb
-C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\x86\Debug\APILibrary.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\x86\Debug\APILibrary.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\x86\Debug\APILibrary.dll
-C:\Users\Administrator\Desktop\Script\Script\APILibrary\obj\x86\Debug\APILibrary.pdb
