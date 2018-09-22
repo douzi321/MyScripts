@@ -31,11 +31,11 @@ namespace MyOpenGLHookCSharp
 
             //(memory.ChannelData as MemoryCopyInterface).Ping();
 
-            ("获取程序集路径 : " + (pathName = @"C:\Users\Administrator\Desktop\testForm\MyOpenGLHookCSharp\HookDll\bin\x86\Debug\HookDll.dll")
+            ("获取程序集路径 : " + (pathName = @"G:\GameScript\MyScripts\C#注入dll到OpenGl程序进行截图测试\HookDll\bin\x86\Debug\HookDll.dll")
                 ).ToOutPut();
             "获取目标进程......".ToOutPut();
 
-            IntPtr intPtr = new IntPtr(1706608);//APILibrary.API.WindowsAPI.FindWindow(null, "ScreenBoardClassWindow");
+            IntPtr intPtr = new IntPtr(197974);//APILibrary.API.WindowsAPI.FindWindow(null, "ScreenBoardClassWindow");
             //"开始循环检测其他窗口的句柄!".ToOutPut();
             //Task<bool> task = new Task<bool>(() =>
             //{

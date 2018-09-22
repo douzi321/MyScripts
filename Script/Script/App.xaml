@@ -63,6 +63,17 @@
             </Style.Triggers>
         </Style>
 
+        <Style TargetType="Border" x:Key="ImageButton">
+            <Setter Property="BorderBrush" Value="Aqua"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="BorderThickness" Value="3"></Setter>
+                    <Setter Property="BorderBrush" Value="Red"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
         <Style TargetType="local:CurButtom" x:Key="SelectButton">
             <Setter Property="Background" Value="White"></Setter>
             <Setter Property="BorderThickness" Value="1"></Setter>

@@ -19,25 +19,20 @@ namespace Script
     /// </summary>
     public partial class FWImages : Window
     {
-        /// <summary>
-        /// 图片集合
-        /// </summary>
-        private ObservableCollection<BitmapSource> ImagesList = new ObservableCollection<BitmapSource>();
+        
 
 
         public FWImages()
         {
             InitializeComponent();
             this.Loaded += FWImages_Loaded;
-            this.Closing += FWImages_Closing;
         }
 
-        private void FWImages_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            e.Cancel = true;
-            this.Hide();
-        }
 
+        /// <summary>
+        /// 图片集合
+        /// </summary>
+        private ObservableCollection<BitmapSource> ImagesList = null;
         /// <summary>
         /// 加载的时候
         /// </summary>
@@ -49,25 +44,13 @@ namespace Script
         }
 
         /// <summary>
-        /// 添加一张图片
+        /// 显示窗口
         /// </summary>
-        /// <param name="bitmapImage"></param>
-        public void AddImage(BitmapSource bit)
+        /// <param name="bitmaps"></param>
+        public void ShowWindow(ObservableCollection<BitmapSource> bitmaps)
         {
-            this.Dispatcher.Invoke(new Action<BitmapSource>((bitmapImage) => {
-                if (ImagesList.Count > 50)
-                {
-                    Clear();
-                }
-                ImagesList.Add(bitmapImage);
-            }), bit);
-        }
-        /// <summary>
-        /// 清理
-        /// </summary>
-        public void Clear()
-        {
-            ImagesList.Clear();
+            this.ImagesList = bitmaps;
+            this.ShowDialog();
         }
     }
 }

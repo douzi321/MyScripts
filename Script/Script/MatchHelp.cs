@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Drawing.Imaging;
-using EasyHook;
 
 namespace Script
 {
@@ -62,7 +61,7 @@ namespace Script
         {
             if (times >= 5)
             {
-                throw new Exception("程序异常");
+                return false;
             }
             try
             {
@@ -96,7 +95,7 @@ namespace Script
             }
             catch (Exception)
             {
-                return matchtempforsharp(tempImage, throld, times++);
+                return matchtempforsharp(tempImage, throld, times + 1);
             }
         }
         /// <summary>

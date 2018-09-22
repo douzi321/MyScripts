@@ -23,6 +23,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using static Script.MatchHelp;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace Script
 {
@@ -119,10 +120,8 @@ namespace Script
         /// <param name="e"></param>
         private void CurButtom_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.Dispatcher.Invoke(new Action(() => {
-                this.FWImages.ShowDialog();
-            }));
-            (sender as CurButtom).IsSelected = false;
+            new FWImages().ShowWindow(this.ImagesList);
+            //(sender as CurButtom).IsSelected = false;
         }
         /// <summary>
         /// 收起事件
@@ -481,12 +480,15 @@ namespace Script
             { 1, OptionKeys.GL2Key},
             { 2, OptionKeys.GL3Key},
         };
-
-        private static readonly string id = "3E4D7CBE";
         /// <summary>
-        /// 符文窗口
+        /// 图片集合
         /// </summary>
-        private FWImages FWImages = new FWImages();
+        private ObservableCollection<BitmapSource> ImagesList = new ObservableCollection<BitmapSource>();
+
+        /// <summary>
+        /// 绑定的id
+        /// </summary>
+        private static readonly string id = "3E4D7CBE";
         /// <summary>
         /// 是否弹出侧边栏
         /// </summary>
@@ -527,6 +529,7 @@ namespace Script
         /// 配置文件路径
         /// </summary>
         private static string configPath = "config.config";
+
         private int namenum;
 
 #endregion
@@ -623,6 +626,17 @@ namespace Script
             }), m);
         }
         /// <summary>
+        /// 添加图片
+        /// </summary>
+        /// <param name="bitmap"></param>
+        public void AddImage(System.Drawing.Bitmap bitmap)
+        {
+            this.Dispatcher.Invoke(new Action<System.Drawing.Bitmap>((bmp) =>
+            {
+                this.ImagesList.Add(bmp.ToBitmapSource());
+            }), bitmap);
+        }
+        /// <summary>
         /// 运行前初始化
         /// </summary>
         private void InitVriual()
@@ -637,7 +651,6 @@ namespace Script
             isStopTask = false;
             mode1Selected.IsEnabled = false;
             mode2Selected.IsEnabled = false;
-            isTop.IsEnabled = false;
             FWMode.IsEnabled = false;
             run.Text = "停止";
 
@@ -650,7 +663,6 @@ namespace Script
         {
             mode1Selected.IsEnabled = true;
             mode2Selected.IsEnabled = true;
-            isTop.IsEnabled = true;
             FWMode.IsEnabled = true;
 
             runningTask.Dispose();
@@ -1360,7 +1372,7 @@ namespace Script
             {
                 if(resultImage == TempImages.CSFWTemp)
                 {
-                    this.FWImages.AddImage(objimg.Bitmap.ToBitmapSource());
+                    AddImage(objimg.Bitmap);
                 }
             }
             objimg.Bitmap.Dispose();

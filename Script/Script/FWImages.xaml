@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Script"
         mc:Ignorable="d"
-        Title="获取的传说符文列表" Height="450" Width="209.607" ResizeMode="NoResize">
+        Title="获取的传说符文列表" Height="600" Width="400">
     <ListBox Name="images"  ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
              ScrollViewer.VerticalScrollBarVisibility="Auto">
         <ListBox.ItemTemplate>
             <DataTemplate>
-                <Image Stretch="Fill" Source="{Binding RelativeSource={RelativeSource Self},Path=DataContext}" Width="{Binding ElementName=images,Path=ActualWidth}" Height="80"></Image>
+                <Image Stretch="Fill" Source="{Binding RelativeSource={RelativeSource Self},Path=DataContext}" Width="{Binding ElementName=images,Path=ActualWidth}" Height="200"></Image>
             </DataTemplate>
         </ListBox.ItemTemplate>
     </ListBox>

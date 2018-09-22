@@ -65,7 +65,7 @@ namespace HookDll
                     if(Interface.CanPictrue)
                     {
                         Interface.Ping();
-                        Save2Picture(0, 0, 400, 300, @"C:\Users\Administrator\Desktop\testForm\test.png");
+                        CaputerImage(400, 300, @"C:\Users\Administrator\Desktop\MyOpenGLHook\test.bmp");
                         Interface.SetOnePictrue();
                     }
                     
@@ -106,5 +106,10 @@ namespace HookDll
             bitmap.Dispose();
             bitmap = null;
         }
+
+        [DllImport("MyOpenGLHook.dll")]
+        public extern static int RunMain(int argc, StringBuilder argv);
+        [DllImport("MyOpenGLHook.dll")]
+        public extern static int CaputerImage(int width, int height, string path);
     }
 }

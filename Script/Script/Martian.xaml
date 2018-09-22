@@ -44,18 +44,24 @@
                     <RadioButton Content="窗口模式" Name="windowMode" Foreground="Yellow" IsChecked="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="10,0,0,0"></RadioButton>
                 </StackPanel>
 
-                <CheckBox Checked="topmode" Unchecked="untopmode" Content="置顶模式" Name="isTop" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-12,10,0,0"></CheckBox>
+                <!--<CheckBox Checked="topmode" Unchecked="untopmode" Content="置顶模式" Name="isTop" HorizontalAlignment="Center" Foreground="White" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-12,10,0,0"></CheckBox>-->
                 <!--<Button Content="win7测试按钮" Click="Button_Click"></Button>-->
-                <local:CurButtom MouseUp="CurButtom_MouseDown"  Cursor="Hand"
-                    Style="{StaticResource BorderButton}" Margin="10,10,10,0" Height="30" IsSelected="True" Text="查看获得的传说符文" FontSize="15"></local:CurButtom>
+                <!--<local:CurButtom MouseUp="CurButtom_MouseDown"  Cursor="Hand"
+                    Style="{StaticResource BorderButton}" Margin="10,10,10,0" Height="30" IsSelected="True" Text="查看获得的传说符文" FontSize="15"></local:CurButtom>-->
+                
 
                 <local:CurButtom Style="{StaticResource SelectButton}" Text="选择夜神模拟器的安装路径" MouseDown="VriualPathSelected_Click" HorizontalAlignment="Center" Margin="0, 20,0,0"></local:CurButtom>
                 <Border Margin="20,5,20,5" Height="28" BorderThickness="2" CornerRadius="4" BorderBrush="Black">
                     <TextBox  Name="vriualPath" IsReadOnly="True"  VerticalContentAlignment="Center"></TextBox>
                 </Border>
 
-                <TextBlock Text="符文保留" FontFamily="{StaticResource hyFont}" HorizontalAlignment="Center" Margin="30" FontSize="25"
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="符文保留" FontFamily="{StaticResource hyFont}" HorizontalAlignment="Center" Margin="30" FontSize="25"
                        Foreground="White"></TextBlock>
+                    <Border MouseUp="CurButtom_MouseDown" Style="{StaticResource ImageButton}">
+                        <Image Source="Resources/box.png" Width="80" Height="80"></Image>
+                    </Border>
+                </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Height="28" Name="FWMode">
                     <CheckBox Name="b" Content="稀有" VerticalAlignment="Center" IsChecked="True" Margin="40,0,0,0" Foreground="White" Checked="Checked" Unchecked="Unchecked"></CheckBox>

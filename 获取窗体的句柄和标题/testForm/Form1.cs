@@ -54,19 +54,20 @@ namespace testForm
                 windowHand = new IntPtr(Convert.ToInt32(textBox1.Text));
                 windowDC = WindowsAPI.GetWindowDC(windowHand);
                 WindowsAPI.GetWindowRect(windowHand, out rect);
-                bitmapHand = WindowsAPI.CreateCompatibleBitmap(windowDC, rect.Width, rect.Height);
-                bitmapDC = WindowsAPI.CreateCompatibleDC(windowDC);
+                //bitmapHand = WindowsAPI.CreateCompatibleBitmap(windowDC, rect.Width, rect.Height);
+                //bitmapDC = WindowsAPI.CreateCompatibleDC(windowDC);
 
-                IntPtr hgdiobjBm = WindowsAPI.SelectObject(bitmapDC, bitmapHand);
-                WindowsAPI.BitBlt(bitmapDC, 0, 0, rect.Width, rect.Height, windowDC, rect.X, rect.Y, 13369376);
-                System.Drawing.Bitmap bitmap = System.Drawing.Bitmap.FromHbitmap(bitmapHand);
+                //IntPtr hgdiobjBm = WindowsAPI.SelectObject(bitmapDC, bitmapHand);
+                //WindowsAPI.BitBlt(bitmapDC, 0, 0, rect.Width, rect.Height, windowDC, rect.X, rect.Y, 13369376);
+                //System.Drawing.Bitmap bitmap = System.Drawing.Bitmap.FromHbitmap(bitmapHand);
+                System.Drawing.Bitmap bitmap = WindowsAPI.GetDesktop(rect);
                 //bitmap.Save(TempImages.OrigImagePath);
                 pictureBox1.Image = bitmap;
                 
-                WindowsAPI.DeleteDC(windowHand);
-                WindowsAPI.DeleteDC(windowDC);
-                WindowsAPI.DeleteDC(bitmapHand);
-                WindowsAPI.DeleteDC(bitmapDC);
+                //WindowsAPI.DeleteDC(windowHand);
+                //WindowsAPI.DeleteDC(windowDC);
+                //WindowsAPI.DeleteDC(bitmapHand);
+                //WindowsAPI.DeleteDC(bitmapDC);
             }
             else
             {
